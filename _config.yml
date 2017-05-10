@@ -80,11 +80,11 @@ follow:
   - class: icon-facebook
     url: http://facebook.com/
   - class: icon-github-alt
-    url: https://github.com/zJiaJun/
+    url: https://github.com/
   - class: icon-twitter
-    url: https://twitter.com/zhujiajun_me
+    url: https://twitter.com/
   - class: icon-google-plus
-    url: https://plus.google.com/116595571760191938657/about
+    url: https://plus.google.com/
 
 #Links
 customLinks:
