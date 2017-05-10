@@ -44,7 +44,7 @@ description: java,scala
 keywords: java,scala
 url: https://liushizhe.github.io/jekyII-blog
 feed: /atom.xml
-favicon: /images/shortcut.jpg
+favicon: {{site.baseurl}}/images/shortcut.jpg
 
 #Nav config
 nav:
@@ -63,7 +63,7 @@ nav:
 author:
     name: liushizhe
     email: ljs19870826@163.com
-    imageLink: /images/header.jpg
+    imageLink: {{site.baseurl}}/images/header.jpg
     simpleIntro: I Have a Dream
     detailIntro:
       <p>广告界的程序猿</p>
