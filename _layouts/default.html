@@ -12,7 +12,7 @@
         <meta name="robots" content="index,nofollow" />
         <!-- atom -->
         <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.url }}{{ site.feed }}" />
-        <link rel="shortcut icon" href="{{ site.favicon }}" type="image/x-icon" />
+        <link rel="shortcut icon" href="{{ site.favicon | absolute_url}}" type="image/x-icon" />
         <!-- font-awesome -->
         <link href="http://cdn.bootcss.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
         <!--<link href='http://fonts.useso.com/css?family=Spirax' rel='stylesheet' type='text/css'>-->
@@ -81,7 +81,7 @@
                         <h4 class="title">About me</h4>
                         <div class="det fn-clear">
                             <div class="det-image">
-                                <img src="{{ site.author.imageLink }}" />
+                                <img src="{{ site.author.imageLink | relative_url}}" />
                             </div> 
                             <div class="det-text">
                                 <p>{{ site.author.simpleIntro }}</p>
