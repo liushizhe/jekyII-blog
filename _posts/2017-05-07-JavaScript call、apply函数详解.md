@@ -44,5 +44,16 @@ fun.apply(this, [arg1, arg2]);
 {% endhighlight %}
 示例中，call apply执行结果一样，call 传递独立参数列表，apply 传递数组参数。
 
+注意：  
+arguments 参数无法直接调用 slice 方法分离参数，用 call 函数配合使用。  
+例如，获取参数数组 arguments 第2个开始参数列表   
+[].slice.call(arguments, 2);  
+而无法直接 arguments.slice(2);  
+报类型错误。
+
+apply 函数可以将数组参数转换称单个参数进行处理，如下  
+func.apply(null, arguments);  
+function func(arg1, arg2){}
+
 
 [参考文档：MDN JavaScript 标准库 Function](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function){:target="_blank"}

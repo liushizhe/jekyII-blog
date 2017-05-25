@@ -86,14 +86,17 @@ follow:
 
 #Links
 customLinks:
-  - item:
-    - text: Jekyll
-      url: http://jekyllrb.com
-    - text: Jekyll Theme
-      url: http://www.zhanxin.info/themes.html
-    message: jekyll    
-  - item:
-    message: 
+    text: 欢迎关注微信公众号
+    link: /images/qrcode_for_wechat.jpg
+    # message: wechat
+  # - item:
+  #   - text: Jekyll
+  #     url: http://jekyllrb.com
+  #   - text: Jekyll Theme
+  #     url: http://www.zhanxin.info/themes.html
+  #   message: jekyll    
+  # - item:
+  #   message: 
 
 #googleAnaly, your id link UA-12345678-X
 googleAnaly:
