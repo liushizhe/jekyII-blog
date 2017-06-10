@@ -126,30 +126,94 @@ document 节点是网页的根节点，每个网页都有自己的根节点，�
 使用 window.onload 方法可以实现 DOM ready 功能，但是若 js 里面请求资源过多，比如在页面中操作图片，但是图片可能尚未加载成功，这样就会影响用户体验。
 为了解决 window.onload 短板问题，引进了 DOMContentLoaded 事件。  
 7. 事件模型  
-事件是一种异步编程的实现方式，本质上是程序各个部分之间的通信。  
-DOM 事件操作包含监听和触发，都定义在 EventTarget 接口。Element 节点、document 节点和 window 对象，XMLHttpRequest、AudioNode、AudioContext等浏览器内置对象，都部署了这个接口。  
-该接口有三个方法：  
-   - addEventListener：绑定事件的监听函数  
-   - removeEventListener：移除事件的监听函数  
-   - dispatchEvent：触发事件  
-target.addEventListener(type, listener[, useCapture]);  
-type：事件名称，大小写敏感。  
-listener：监听函数。事件发生时，会调用该监听函数。  
-useCapture：布尔值，表示监听函数是否在捕获阶段（capture）触发，默认为false（监听函数只在冒泡阶段被触发）。  
-removeEventListener 参数一样  
-target.dispatchEvent(event) 触发事件  
-使用实例：
-{% highlight html %}
-function debug() {
-  console.log('hello world');
-}
-var button = $('#test1');
-button[0].addEventListener('click', debug, false);
-var event = new Event('click');
-button[0].dispatchEvent(event);
-button[0].removeEventListener('click', debug, false);
-{% endhighlight %}  
+   1. 事件接口  
+    事件是一种异步编程的实现方式，本质上是程序各个部分之间的通信。  
+    DOM 事件操作包含监听和触发，都定义在 EventTarget 接口。Element 节点、document 节点和 window 对象，XMLHttpRequest、AudioNode、AudioContext等浏览器内置对象，都部署了这个接口。  
+    该接口有三个方法：  
+       - addEventListener：绑定事件的监听函数  
+       - removeEventListener：移除事件的监听函数  
+       - dispatchEvent：触发事件  
+    target.addEventListener(type, listener[, useCapture]);  
+    type：事件名称，大小写敏感。  
+    listener：监听函数。事件发生时，会调用该监听函数。  
+    useCapture：布尔值，表示监听函数是否在捕获阶段（capture）触发，默认为false（监听函数只在冒泡阶段被触发）。  
+    removeEventListener 参数一样  
+    target.dispatchEvent(event) 触发事件，event 由 Event 对象创建  
+    使用实例：  
+    function debug() {  
+      console.log('hello world');  
+    }  
+    var button = $('#test1');  
+    button[0].addEventListener('click', debug, false);  
+    var event = new Event('click');  
+    button[0].dispatchEvent(event);  
+    button[0].removeEventListener('click', debug, false);        
+   2. 事件传播  
+   当一个事件发生以后，它会在不同的DOM节点之间传播（propagation）。这种传播分成三个阶段：  
+   - 第一阶段：从window对象传导到目标节点，称为“捕获阶段”（capture phase）。
+   - 第二阶段：在目标节点上触发，称为“目标阶段”（target phase）。
+   - 第三阶段：从目标节点传导回window对象，称为“冒泡阶段”（bubbling phase）。  
+   详情参考[事件模型](http://javascript.ruanyifeng.com/dom/event.html#toc0){:target="_blank"}  
+8. BOM  
+浏览器对象模型，现代浏览器几乎实现了 JavaScript 交互性的属性和方法。
+   1. window  
+   所有浏览器都支持 window 对象。它表示浏览器窗口。  
+   所有 JavaScript 全局对象、函数以及变量均自动成为 window 对象的成员。  
+   全局变量是 window 对象的属性，全局函数是 window 对象的方法。  
+   document 也是 window 属性。  
+   2. navigator  
+   包含访问者浏览器信息  
+   3. cookie  
+   cookie 是存储于访问者的计算机中的变量。每当同一台计算机通过浏览器请求某个页面时，就会发送这个 cookie。你可以使用 JavaScript 来创建和取回 cookie 的值。  
+   cookie 包含有名字、密码、日期。
+9. AJAX  
+AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。    
+具体来说，AJAX包括以下几个步骤。  
+- 创建AJAX对象  
+- 发出HTTP请求  
+- 接收服务器传回的数据  
+- 更新网页数据  
+概括起来，就是一句话，AJAX通过原生的XMLHttpRequest对象发出HTTP请求，得到服务器返回的数据后，再进行处理。  
+AJAX可以是同步请求，也可以是异步请求。但是，大多数情况下，特指异步请求。因为同步的Ajax请求，对浏览器有“堵塞效应”。  
+详情参考[AJAX](http://javascript.ruanyifeng.com/bom/ajax.html#toc27){:target="_blank"}  
 
-
-
+#### 练习  
+1. 练习1  
+涉及知识点：字符串、数组操作，正则表达式，DOM 基本操作  
+- HTML 设计相关标签： 
+textarea：文本编辑框，可设定行列宽度等属性  
+input：输入元素，type 可设置为text/password/summit/button/checkbox/radio等  
+2. 练习2  
+涉及知识点：正则表达式，定时操作，Date 对象  
+- 定时操作：  
+clock = setInterval(handler, timeout)  设定定时查询函数，handler 到时后执行动作，timeout 定时时间，单位 ms  
+clearInterVal(clock) 清除定时器  
+setTimeout 定时执行动作，不过只执行一次，用法同 setInterval  
+clearTimeout 清除定时器  
+- Date 对象  
+new Date(YYYY/MM/DD)  由参数字符串设定的时间创建一个 Date 实例  
+new Date()  由当前时间创建一个 Date 实例  
+GMT 格林威治时间，UTC 世界标准时间，时间值跟 GMT 差不多，计算方式更准确  
+注：2个 Date 实例相减即可获得时间差（ms）  
+3. 练习3  
+涉及知识点：HTML、CSS 相关知识，定时操作  
+HTML：可以自定义元素属性，如属性rel='1'，js 操作时可通过 getAttribute/setAttribute 操作  
+CSS：positon 属性无法继承，多个选择器注意同级、父子等关系  
+4. 练习4  
+涉及知识点：HTML、CSS 相关知识，事件处理  
+CSS：  
+涉及到弹出框可显示可不显示，display 设置是否显示  
+DOM 操作 CSS 选择器时，CSS 设置元素与 DOM 操作元素双方要一致  
+事件处理：  
+按键事件：keydown，不同按键对应不同 keycode（event.keyCode）  
+鼠标事件：mouseover 放置在某元素上，mouseout 移开某元素，click 点击  
+5. 练习5  
+涉及知识点：HTML、CSS 相关知识，事件处理  
+CSS:  
+两个方框并排，需要用到浮动布局方式  
+小方框移动，需要手动重排，定位方式采用绝对定位  
+事件处理：  
+鼠标事件：mousedown 鼠标按下，mousemove 拖动鼠标，mouseup 点击鼠标后松开  
+鼠标位置可由事件中属性 event.clientX、event.clientY 设定  
+元素位置大小可由属性 ele.offsetLeft/ele.offsetTop/ele.offsetWidth/ele.offsetHeight 设定  
 
