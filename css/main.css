@@ -540,13 +540,19 @@ a         { color: #91736b; text-decoration: none; }
     position: relative;
     height: auto;
 }
-.main .article .contact a {
+.main .article .contact p a {
     line-height: 32px;
     height: 32px;
     display: inline-block;
     text-align: center;
     padding: 0 10px;
     background: #f2eeec;
+    width: auto;
+}
+.main .article .contact p {
+    font-size: 24px;
+    vertical-align: middle;
+    /*background: #f2eeec;*/
     width: auto;
 }
 .main .article .contact a:hover {

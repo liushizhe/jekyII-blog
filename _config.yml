@@ -56,18 +56,18 @@ nav:
     url: /archives.html
   - text: 关于我
     url: /about.html
-  - text: 友情链接
-    url: /links.html
+#  - text: 友情链接
+#    url: /links.html
 
 #Author config
 author:
     name: liushizhe
-    email: ljs19870826@163.com
+    email: ljs19870826@gmail.com
     imageLink: /images/header.jpg
     simpleIntro: I Have a Dream
     detailIntro:
       <p>前端不断学习中...</p>
-      <p>欢迎关注微信公众号：pashanghuoo</p>
+      <p>欢迎关注微信公众号：guowaizixun</p>
 
 #Follow me, you can choose your icon by http://fortawesome.github.io/Font-Awesome/icons/#brand
 follow:
@@ -86,7 +86,7 @@ follow:
 
 #Links
 customLinks:
-    text: 欢迎关注微信公众号：pashanghuoo
+    text: 欢迎关注微信公众号：guowaizixun
     link: /images/qrcode_for_wechat.jpg
     # message: wechat
   # - item:
