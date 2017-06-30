@@ -41,7 +41,7 @@ timezone:      null
 #Site config
 title: 前端学习
 description: html,css,javascript
-keywords: html,css,javascript
+keywords: 前端技术博客
 url: https://liushizhe.github.io/jekyII-blog
 feed: /atom.xml
 favicon: /images/shortcut.jpg
