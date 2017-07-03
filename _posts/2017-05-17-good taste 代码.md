@@ -51,7 +51,8 @@ node_t *remove_node(node_t *head, node_t *node)
 }
 {% endhighlight %}
 
-获取当前节点指向下一节点的地址，对该节点进行解引用就是下一节点，以此实现链表的迭代并查找待删除节点，并且链表删除中，将当前节点（也就是前一节点next指向节点）指向删除节点的下一个节点，就可直接删掉待删除的节点（只需一条语句），无需判断是否为头节点。
+本例中，节点（node）结构体属性 next 存放在节点首地址，也就是说，存放 next 指针变量的地址就是本节点的地址（&node->next），又 next 指针指向下一节点地址，所以对 next 指针取地址和获取 next 指针值就分别获取当前节点和下一节点地址。链表结构如下图所示。
+![链表结构]({{site.baseurl}}/images/posts/good-taste-c-node.png)
 
 [测试源码github地址](https://github.com/liushizhe/good-taste-code){:target="_blank"}
 
