@@ -3,6 +3,7 @@ layout: post
 title: JavaScript 事件代理
 date: 2017-05-26 15:00:35
 category: "JavaScript"
+keywords: javascript,事件代理
 ---
 
 学习 DOM 事件模型，通过具体实例，对 JavaScript 事件代理有更深的理解，同时也了解到 call/apply 函数妙用。

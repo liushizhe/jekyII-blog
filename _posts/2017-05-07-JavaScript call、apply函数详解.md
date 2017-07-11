@@ -3,6 +3,7 @@ layout: post
 title: JavaScript call apply 函数详解
 date: 2017-05-07 22:34:35
 category: "JavaScript"
+keywords: javascript,call,apply
 ---
 
 初学 JavaScript 这门脚本语言，未深入使用，对一些操作方式用得比较别扭，包括call、apply函数使用，现记录下使用心得。  

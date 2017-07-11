@@ -3,6 +3,7 @@ layout: post
 title: JavaScript 正则表达式学习小结
 date: 2017-05-24 00:29:35
 category: "JavaScript"
+keywords: javascript,正则表达式,学习
 ---
 
 学习正则表达式一些记录，有些地方理解不是很透彻，暂且保存下来后续进一步深入。

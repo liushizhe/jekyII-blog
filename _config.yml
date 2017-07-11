@@ -40,8 +40,8 @@ timezone:      null
 
 #Site config
 title: 前端学习
-description: html,css,javascript
-keywords: 前端技术博客
+description: 一个包含HTML、CSS、JavaScript前端技术的博客网站
+keywords: 前端,html,css,javascript,博客
 url: https://liushizhe.github.io/jekyII-blog
 feed: /atom.xml
 favicon: /images/shortcut.jpg
@@ -105,8 +105,8 @@ googleAnaly:
 
 #baidu tongji
 baiduTongji:
-  config: false
-  id: 
+  config: true
+  id: d6ed955df56d3f1233c89df2215606f8
 
 #comment config
 disqus:

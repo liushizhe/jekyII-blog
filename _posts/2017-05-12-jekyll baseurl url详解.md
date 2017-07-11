@@ -3,6 +3,7 @@ layout: post
 title: jekyll baseurl url 详解
 date: 2017-05-12 00:22:35
 category: "jekyll"
+keywords: jekyll,baseurl,url
 ---
 
 jekyll本地调试时没问题，但是上传到github后图片无法显示，查看jekyll官方网站也没对 baseurl url 做详细描述，自己调试了下，写下一些见解，欢迎拍砖。（博客还不能评论，尴尬~~）

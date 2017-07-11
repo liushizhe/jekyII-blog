@@ -3,6 +3,7 @@ layout: post
 title: good taste 代码
 date: 2017-05-17 00:27:35
 category: "C"
+keywords: c,good taste,Linus
 ---
 
 刷小密圈看到圈友分享一篇linus关于采访，采访中提及代码的good taste 或者 poor taste，并用删除单链表节点进行举例。[采访链接](http://blog.jobbole.com/111159/){:target="_blank"}

@@ -3,6 +3,7 @@ layout: post
 title: click onclick 区别
 date: 2017-06-10 20:00:35
 category: "JavaScript"
+keywords: javascript,click,onclick
 ---
 
 文章对 DOM 中常用点击操作涉及 click onclik 方法或对象进行详细说明。

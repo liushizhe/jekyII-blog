@@ -3,6 +3,7 @@ layout: post
 title: 百度前端学习任务笔记2（JavaScript）
 date: 2017-04-23 21:07:35
 category: "JavaScript"
+keywords: javascript,百度ife
 ---
 
 掌握JavaScript基础功能，使用JavaScript编写简单网页交互功能。

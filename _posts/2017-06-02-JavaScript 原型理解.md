@@ -3,6 +3,7 @@ layout: post
 title: JavaScript 原型理解
 date: 2017-06-02 15:10:35
 category: "JavaScript"
+keywords: javascript,原型
 ---
 
 网上有太多解读 JavaScript 原型相关文章，只写自己目前状态下的理解，或有谬误，以后再改。
