@@ -19,7 +19,7 @@ body {
     background: #92b3a2 url(../images/bg.jpg) repeat 0 0;
     font-size: 14px;
     line-height: 1.5;
-    font-family: Georgia, Hiragino Sans GB,\5b8b\4f53;
+    font-family: tahoma, arial, Microsoft YaHei, sans-serif;/*Georgia, Hiragino Sans GB,\5b8b\4f53;*/
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
 }
 
